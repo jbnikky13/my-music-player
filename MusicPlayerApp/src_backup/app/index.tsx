@@ -9,10 +9,10 @@ const VIBES = {
 };
 
 export default function HomeScreen() {
-  const [selected, setSelected] = useState(null);
+  const [selected, setSelected] = useState<string | null>(null);
   const router = useRouter();
 
-  const handleSelect = (vibe) => {
+  const handleSelect = (vibe: string) => {
     setSelected(vibe);
     router.push({ pathname: '/player', params: { vibe } });
   };
